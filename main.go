@@ -23,17 +23,6 @@ func unique[T comparable](s []T) []T {
 	return result
 }
 
-// func filterLinks(input []string) (output []string) {
-// 	for _, link := range input {
-// 		if link == "/" {
-// 			continue
-// 		} else {
-// 			output = append(output, link)
-// 		}
-// 	}
-// 	return output
-// }
-
 func getLinks(link string) (links []string) {
 	url, err := url.Parse(link)
 	if err != nil {
