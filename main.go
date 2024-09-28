@@ -41,6 +41,7 @@ func getLinks(link string) (links []string) {
 		return links
 	}
 
+	// TOOD: we should also follow redirects...
 	if resp.StatusCode >= 400 {
 		deadlinks = append(deadlinks, url.String())
 		return links
